@@ -1,0 +1,14 @@
+{
+  "snapshot_at": "2026-10-21T13:53:51.033358-07:00",
+  "timezone": "America/Los_Angeles",
+  "date": "2026-10-21",
+  "warnings": [
+    "No frozen nfl props50 for 2026-10-21",
+    "No frozen nfl all100 for 2026-10-21",
+    "No frozen mlb props50 for 2026-10-21",
+    "No frozen mlb all100 for 2026-10-21"
+  ],
+  "graded_pick_limit": 10000,
+  "list_grades_policy": "First frozen version only",
+  "read_only": true
+}

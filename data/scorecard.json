@@ -1,0 +1,4638 @@
+{
+  "at": "2026-10-21T15:07:40.120484+00:00",
+  "overall": {
+    "n": 7721,
+    "settled_n": 666,
+    "games": 42,
+    "hit_rate": 0.6066066066066066,
+    "roi": -0.4693541380468305,
+    "roi_ci": [
+      -0.5275148096447954,
+      -0.4038815239213217
+    ],
+    "mean_clv": null,
+    "clv_positive_rate": null,
+    "mean_line_clv": null,
+    "no_close_captured": 799,
+    "unresolved": 133,
+    "model": {
+      "n": 599,
+      "brier": 0.22790493169343984,
+      "log_loss": 0.6479305134908994,
+      "calibration": [
+        {
+          "bucket": 5,
+          "n": 349,
+          "predicted": 0.5566128567362938,
+          "actual": 0.5816618911174785
+        },
+        {
+          "bucket": 6,
+          "n": 212,
+          "predicted": 0.6392843451954678,
+          "actual": 0.7169811320754716
+        },
+        {
+          "bucket": 7,
+          "n": 38,
+          "predicted": 0.7218036688064103,
+          "actual": 0.6842105263157895
+        }
+      ]
+    },
+    "blend": {
+      "n": 666,
+      "brier": 0.23155340745024625,
+      "log_loss": 0.6556079974916414,
+      "calibration": [
+        {
+          "bucket": 1,
+          "n": 1,
+          "predicted": 0.18189994429351158,
+          "actual": 0.0
+        },
+        {
+          "bucket": 2,
+          "n": 1,
+          "predicted": 0.2694648888523443,
+          "actual": 0.0
+        },
+        {
+          "bucket": 3,
+          "n": 3,
+          "predicted": 0.37451176732011265,
+          "actual": 0.0
+        },
+        {
+          "bucket": 4,
+          "n": 3,
+          "predicted": 0.47094736972160395,
+          "actual": 0.0
+        },
+        {
+          "bucket": 5,
+          "n": 448,
+          "predicted": 0.549195558446734,
+          "actual": 0.5580357142857143
+        },
+        {
+          "bucket": 6,
+          "n": 208,
+          "predicted": 0.6169056638197208,
+          "actual": 0.7355769230769231
+        },
+        {
+          "bucket": 7,
+          "n": 1,
+          "predicted": 0.7017381307727759,
+          "actual": 0.0
+        },
+        {
+          "bucket": 8,
+          "n": 1,
+          "predicted": 0.8052422989659371,
+          "actual": 1.0
+        }
+      ]
+    },
+    "market": {
+      "n": 0,
+      "brier": null,
+      "log_loss": null,
+      "calibration": []
+    },
+    "demote_candidate": false
+  },
+  "groups": {
+    "angle": {
+      "calibration_shrink=0.85": {
+        "n": 7721,
+        "settled_n": 666,
+        "games": 42,
+        "hit_rate": 0.6066066066066066,
+        "roi": -0.4693541380468305,
+        "roi_ci": [
+          -0.5275148096447954,
+          -0.4038815239213217
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 799,
+        "unresolved": 133,
+        "model": {
+          "n": 599,
+          "brier": 0.22790493169343984,
+          "log_loss": 0.6479305134908994,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 349,
+              "predicted": 0.5566128567362938,
+              "actual": 0.5816618911174785
+            },
+            {
+              "bucket": 6,
+              "n": 212,
+              "predicted": 0.6392843451954678,
+              "actual": 0.7169811320754716
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 666,
+          "brier": 0.23155340745024625,
+          "log_loss": 0.6556079974916414,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 3,
+              "predicted": 0.47094736972160395,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 448,
+              "predicted": 0.549195558446734,
+              "actual": 0.5580357142857143
+            },
+            {
+              "bucket": 6,
+              "n": 208,
+              "predicted": 0.6169056638197208,
+              "actual": 0.7355769230769231
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "injury: Out": {
+        "n": 108,
+        "settled_n": 0,
+        "games": 16,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 17,
+        "unresolved": 17,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "insufficient graded data: unvalidated default blend": {
+        "n": 6941,
+        "settled_n": 666,
+        "games": 27,
+        "hit_rate": 0.6066066066066066,
+        "roi": -0.4693541380468305,
+        "roi_ci": [
+          -0.5275148096447954,
+          -0.4038815239213217
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 799,
+        "unresolved": 133,
+        "model": {
+          "n": 599,
+          "brier": 0.22790493169343984,
+          "log_loss": 0.6479305134908994,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 349,
+              "predicted": 0.5566128567362938,
+              "actual": 0.5816618911174785
+            },
+            {
+              "bucket": 6,
+              "n": 212,
+              "predicted": 0.6392843451954678,
+              "actual": 0.7169811320754716
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 666,
+          "brier": 0.23155340745024625,
+          "log_loss": 0.6556079974916414,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 3,
+              "predicted": 0.47094736972160395,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 448,
+              "predicted": 0.549195558446734,
+              "actual": 0.5580357142857143
+            },
+            {
+              "bucket": 6,
+              "n": 208,
+              "predicted": 0.6169056638197208,
+              "actual": 0.7355769230769231
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:altitude:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:altitude:residual:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:back_to_back:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:back_to_back:residual:rejected": {
+        "n": 333,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:back_to_back:residual:unconfirmed": {
+        "n": 15,
+        "settled_n": 0,
+        "games": 5,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:book_consensus:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:book_consensus:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:divisional:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:divisional:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:dome:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:dome:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:eastward_crossing:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:eastward_crossing:residual:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:goalie_confirmation:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:goalie_confirmation:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:home_away:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:home_away:residual:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:last5_last10_hits:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:last5_last10_hits:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:line_movement:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:line_movement:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:minutes_recent_level:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:minutes_recent_level:residual:rejected": {
+        "n": 333,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:minutes_recent_level:residual:unconfirmed": {
+        "n": 15,
+        "settled_n": 0,
+        "games": 5,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:minutes_role_change:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:minutes_role_change:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_goalie_b2b:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_goalie_b2b:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_position_defense:incremental:rejected": {
+        "n": 314,
+        "settled_n": 0,
+        "games": 8,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_position_defense:incremental:untestable": {
+        "n": 34,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_position_defense:residual:rejected": {
+        "n": 299,
+        "settled_n": 0,
+        "games": 8,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_position_defense:residual:unconfirmed": {
+        "n": 15,
+        "settled_n": 0,
+        "games": 5,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:opponent_position_defense:residual:untestable": {
+        "n": 34,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:pace_up_down:incremental:rejected": {
+        "n": 314,
+        "settled_n": 0,
+        "games": 8,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:pace_up_down:incremental:untestable": {
+        "n": 34,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:pace_up_down:residual:rejected": {
+        "n": 282,
+        "settled_n": 0,
+        "games": 8,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:pace_up_down:residual:unconfirmed": {
+        "n": 32,
+        "settled_n": 0,
+        "games": 5,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:pace_up_down:residual:untestable": {
+        "n": 34,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:primetime:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:primetime:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:recent_hot_cold:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:recent_hot_cold:residual:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:referee_crews:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:referee_crews:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:rest_days:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:rest_days:residual:rejected": {
+        "n": 316,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:rest_days:residual:unconfirmed": {
+        "n": 32,
+        "settled_n": 0,
+        "games": 5,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:revenge_contract_year:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:revenge_contract_year:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:routes:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:routes:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:snap_share_level:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:snap_share_level:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:snap_share_trend:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:snap_share_trend:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:starting_goalie_quality:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:starting_goalie_quality:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:target_air_share:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:target_air_share:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:target_share:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:target_share:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:teammate_out:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:teammate_out:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:three_in_four:incremental:rejected": {
+        "n": 314,
+        "settled_n": 0,
+        "games": 8,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:three_in_four:incremental:untestable": {
+        "n": 34,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:three_in_four:residual:rejected": {
+        "n": 314,
+        "settled_n": 0,
+        "games": 8,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:three_in_four:residual:untestable": {
+        "n": 34,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:travel_distance:incremental:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:travel_distance:residual:rejected": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:weather_temp:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:weather_temp:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:weather_wind:incremental:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "lab:weather_wind:residual:untestable": {
+        "n": 348,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "model disagrees strongly — likely missing info (injury/role/minutes)": {
+        "n": 372,
+        "settled_n": 0,
+        "games": 13,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "no injury record": {
+        "n": 1878,
+        "settled_n": 229,
+        "games": 27,
+        "hit_rate": 0.6157205240174672,
+        "roi": -0.7194363929146538,
+        "roi_ci": [
+          -0.8741666666666666,
+          -0.5712289562289562
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 257,
+        "unresolved": 28,
+        "model": {
+          "n": 183,
+          "brier": 0.19818230733820244,
+          "log_loss": 0.5865082388758018,
+          "calibration": [
+            {
+              "bucket": 6,
+              "n": 145,
+              "predicted": 0.6531510619257891,
+              "actual": 0.7586206896551724
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 229,
+          "brier": 0.21207722934353399,
+          "log_loss": 0.6156245744895941,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 2,
+              "predicted": 0.4861704630207949,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 36,
+              "predicted": 0.5046996765100812,
+              "actual": 0.08333333333333333
+            },
+            {
+              "bucket": 6,
+              "n": 184,
+              "predicted": 0.6186048117084195,
+              "actual": 0.7445652173913043
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "non-standard Dabble multiplier — payout unknown": {
+        "n": 1292,
+        "settled_n": 0,
+        "games": 13,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "soft line": {
+        "n": 555,
+        "settled_n": 0,
+        "games": 13,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "unvalidated equal-book consensus": {
+        "n": 6941,
+        "settled_n": 666,
+        "games": 27,
+        "hit_rate": 0.6066066066066066,
+        "roi": -0.4693541380468305,
+        "roi_ci": [
+          -0.5275148096447954,
+          -0.4038815239213217
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 799,
+        "unresolved": 133,
+        "model": {
+          "n": 599,
+          "brier": 0.22790493169343984,
+          "log_loss": 0.6479305134908994,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 349,
+              "predicted": 0.5566128567362938,
+              "actual": 0.5816618911174785
+            },
+            {
+              "bucket": 6,
+              "n": 212,
+              "predicted": 0.6392843451954678,
+              "actual": 0.7169811320754716
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 666,
+          "brier": 0.23155340745024625,
+          "log_loss": 0.6556079974916414,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 3,
+              "predicted": 0.47094736972160395,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 448,
+              "predicted": 0.549195558446734,
+              "actual": 0.5580357142857143
+            },
+            {
+              "bucket": 6,
+              "n": 208,
+              "predicted": 0.6169056638197208,
+              "actual": 0.7355769230769231
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "verify: possible stale line / news": {
+        "n": 1942,
+        "settled_n": 230,
+        "games": 27,
+        "hit_rate": 0.6173913043478261,
+        "roi": -0.7194363929146538,
+        "roi_ci": [
+          -0.8741666666666666,
+          -0.5712289562289562
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 282,
+        "unresolved": 52,
+        "model": {
+          "n": 184,
+          "brier": 0.19760609122883785,
+          "log_loss": 0.5852869820142002,
+          "calibration": [
+            {
+              "bucket": 6,
+              "n": 146,
+              "predicted": 0.6534474501590822,
+              "actual": 0.7602739726027398
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 230,
+          "brier": 0.2117829805203012,
+          "log_loss": 0.6150263624306959,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 2,
+              "predicted": 0.4861704630207949,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 36,
+              "predicted": 0.5046996765100812,
+              "actual": 0.08333333333333333
+            },
+            {
+              "bucket": 6,
+              "n": 185,
+              "predicted": 0.6186123532667523,
+              "actual": 0.745945945945946
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "paper:nhl_sog_early": {
+        "n": 0,
+        "settled_n": 0,
+        "games": 0,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false,
+        "paper_review": {
+          "n": 0,
+          "remaining": 200,
+          "clv_n": 0,
+          "clv_win_rate": null,
+          "clv_ci95": null,
+          "roi_ci95": null,
+          "clv_ties": 0,
+          "missing_clv": 0,
+          "go": false,
+          "pause_new_entries": false,
+          "status": "paper: collecting evidence",
+          "stop_reasons": [],
+          "automatic_promotion": false
+        }
+      },
+      "paper:nfl_resid": {
+        "n": 0,
+        "settled_n": 0,
+        "games": 0,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false,
+        "paper_review": {
+          "n": 0,
+          "remaining": 200,
+          "clv_n": 0,
+          "clv_win_rate": null,
+          "clv_ci95": null,
+          "roi_ci95": null,
+          "clv_ties": 0,
+          "missing_clv": 0,
+          "go": false,
+          "pause_new_entries": false,
+          "status": "paper: collecting evidence",
+          "stop_reasons": [],
+          "automatic_promotion": false
+        }
+      },
+      "paper:nhl_sog_b2b_under": {
+        "n": 0,
+        "settled_n": 0,
+        "games": 0,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false,
+        "paper_review": {
+          "n": 0,
+          "remaining": 200,
+          "clv_n": 0,
+          "clv_win_rate": null,
+          "clv_ci95": null,
+          "roi_ci95": null,
+          "clv_ties": 0,
+          "missing_clv": 0,
+          "go": false,
+          "pause_new_entries": false,
+          "status": "paper: collecting evidence",
+          "stop_reasons": [],
+          "automatic_promotion": false
+        }
+      }
+    },
+    "market": {
+      "ML": {
+        "n": 353,
+        "settled_n": 5,
+        "games": 33,
+        "hit_rate": 0.4,
+        "roi": -0.20681481481481484,
+        "roi_ci": [
+          -1.0,
+          0.6091851851851852
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 5,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 5,
+          "brier": 0.09883164252963897,
+          "log_loss": 0.3659117746736962,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 2,
+              "predicted": 0.3776981407506788,
+              "actual": 0.0
+            },
+            {
+              "bucket": 6,
+              "n": 1,
+              "predicted": 0.6295538658875314,
+              "actual": 1.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_assists": {
+        "n": 654,
+        "settled_n": 60,
+        "games": 16,
+        "hit_rate": 0.7333333333333333,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 79,
+        "unresolved": 19,
+        "model": {
+          "n": 60,
+          "brier": 0.2088438886339386,
+          "log_loss": 0.6091194034334909,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 31,
+              "predicted": 0.5642319977004178,
+              "actual": 0.6774193548387096
+            },
+            {
+              "bucket": 6,
+              "n": 24,
+              "predicted": 0.6348674110723362,
+              "actual": 0.7916666666666666
+            },
+            {
+              "bucket": 7,
+              "n": 5,
+              "predicted": 0.7248987736594455,
+              "actual": 0.8
+            }
+          ]
+        },
+        "blend": {
+          "n": 60,
+          "brier": 0.213972766090742,
+          "log_loss": 0.6201139040022009,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 35,
+              "predicted": 0.5620305533165147,
+              "actual": 0.6857142857142857
+            },
+            {
+              "bucket": 6,
+              "n": 25,
+              "predicted": 0.6152702357010607,
+              "actual": 0.8
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_blocks": {
+        "n": 21,
+        "settled_n": 0,
+        "games": 7,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_goals": {
+        "n": 42,
+        "settled_n": 0,
+        "games": 2,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_points": {
+        "n": 916,
+        "settled_n": 60,
+        "games": 16,
+        "hit_rate": 0.7,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 79,
+        "unresolved": 19,
+        "model": {
+          "n": 60,
+          "brier": 0.22091983317598618,
+          "log_loss": 0.6343600301601842,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 43,
+              "predicted": 0.5863252131519708,
+              "actual": 0.6511627906976745
+            },
+            {
+              "bucket": 6,
+              "n": 17,
+              "predicted": 0.6091957740862757,
+              "actual": 0.8235294117647058
+            }
+          ]
+        },
+        "blend": {
+          "n": 60,
+          "brier": 0.22298840476130255,
+          "log_loss": 0.6386407890929209,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 54,
+              "predicted": 0.5809853886909278,
+              "actual": 0.7037037037037037
+            },
+            {
+              "bucket": 6,
+              "n": 6,
+              "predicted": 0.6083453735151172,
+              "actual": 0.6666666666666666
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_points_assists": {
+        "n": 250,
+        "settled_n": 0,
+        "games": 11,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_points_rebounds": {
+        "n": 175,
+        "settled_n": 0,
+        "games": 11,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_points_rebounds_assists": {
+        "n": 591,
+        "settled_n": 0,
+        "games": 11,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_rebounds": {
+        "n": 659,
+        "settled_n": 60,
+        "games": 14,
+        "hit_rate": 0.6333333333333333,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 79,
+        "unresolved": 19,
+        "model": {
+          "n": 60,
+          "brier": 0.23380911534119667,
+          "log_loss": 0.6605114411065629,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 44,
+              "predicted": 0.5539380077209272,
+              "actual": 0.6590909090909091
+            },
+            {
+              "bucket": 6,
+              "n": 16,
+              "predicted": 0.6203266037593286,
+              "actual": 0.5625
+            }
+          ]
+        },
+        "blend": {
+          "n": 60,
+          "brier": 0.23486106626485428,
+          "log_loss": 0.6626663403991648,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 51,
+              "predicted": 0.5550345056656119,
+              "actual": 0.6274509803921569
+            },
+            {
+              "bucket": 6,
+              "n": 9,
+              "predicted": 0.6137279835290396,
+              "actual": 0.6666666666666666
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_rebounds_assists": {
+        "n": 107,
+        "settled_n": 0,
+        "games": 11,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_shots_on_goal": {
+        "n": 587,
+        "settled_n": 369,
+        "games": 13,
+        "hit_rate": 0.6205962059620597,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 429,
+        "unresolved": 60,
+        "model": {
+          "n": 369,
+          "brier": 0.22990706345037035,
+          "log_loss": 0.6519485759484552,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 200,
+              "predicted": 0.5508462486677831,
+              "actual": 0.545
+            },
+            {
+              "bucket": 6,
+              "n": 139,
+              "predicted": 0.6453704771330511,
+              "actual": 0.7266187050359713
+            },
+            {
+              "bucket": 7,
+              "n": 30,
+              "predicted": 0.7204489164936076,
+              "actual": 0.6333333333333333
+            }
+          ]
+        },
+        "blend": {
+          "n": 369,
+          "brier": 0.23243228961164025,
+          "log_loss": 0.6574793266776524,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 220,
+              "predicted": 0.5502538524965288,
+              "actual": 0.5409090909090909
+            },
+            {
+              "bucket": 6,
+              "n": 149,
+              "predicted": 0.6176338206210902,
+              "actual": 0.738255033557047
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_steals": {
+        "n": 42,
+        "settled_n": 0,
+        "games": 7,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "PROP:player_threes": {
+        "n": 478,
+        "settled_n": 50,
+        "games": 14,
+        "hit_rate": 0.56,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 66,
+        "unresolved": 16,
+        "model": {
+          "n": 50,
+          "brier": 0.23729954884233062,
+          "log_loss": 0.6660380114810893,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 31,
+              "predicted": 0.5487802849497242,
+              "actual": 0.5161290322580645
+            },
+            {
+              "bucket": 6,
+              "n": 16,
+              "predicted": 0.6439633234120675,
+              "actual": 0.5625
+            },
+            {
+              "bucket": 7,
+              "n": 3,
+              "predicted": 0.7301926838460444,
+              "actual": 1.0
+            }
+          ]
+        },
+        "blend": {
+          "n": 50,
+          "brier": 0.2424004384919358,
+          "log_loss": 0.67770081694059,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 32,
+              "predicted": 0.5456309822976749,
+              "actual": 0.5
+            },
+            {
+              "bucket": 6,
+              "n": 18,
+              "predicted": 0.6168891639274107,
+              "actual": 0.6666666666666666
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "SPREAD": {
+        "n": 1450,
+        "settled_n": 27,
+        "games": 33,
+        "hit_rate": 0.25925925925925924,
+        "roi": -0.5743751730094788,
+        "roi_ci": [
+          -0.8218834122342894,
+          -0.27593006484409727
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 27,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 27,
+          "brier": 0.2520919238469601,
+          "log_loss": 0.6974503157340484,
+          "calibration": [
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 1,
+              "predicted": 0.3681390204589804,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 24,
+              "predicted": 0.5042029475845319,
+              "actual": 0.2916666666666667
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "TOTAL": {
+        "n": 1396,
+        "settled_n": 35,
+        "games": 33,
+        "hit_rate": 0.4,
+        "roi": -0.42584352868021835,
+        "roi_ci": [
+          -0.6231826943580773,
+          -0.2689841918593561
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 35,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 35,
+          "brier": 0.2490588053440542,
+          "log_loss": 0.6912581294430001,
+          "calibration": [
+            {
+              "bucket": 4,
+              "n": 3,
+              "predicted": 0.47094736972160395,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 32,
+              "predicted": 0.5022393848441188,
+              "actual": 0.4375
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      }
+    },
+    "sport": {
+      "nba": {
+        "n": 6532,
+        "settled_n": 250,
+        "games": 16,
+        "hit_rate": 0.64,
+        "roi": -0.36880161662217065,
+        "roi_ci": [
+          -0.36880161662217065,
+          -0.36880161662217065
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 323,
+        "unresolved": 73,
+        "model": {
+          "n": 230,
+          "brier": 0.2246928159616688,
+          "log_loss": 0.641484143722038,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 149,
+              "predicted": 0.5643532702510734,
+              "actual": 0.6308724832214765
+            },
+            {
+              "bucket": 6,
+              "n": 73,
+              "predicted": 0.6276956830129465,
+              "actual": 0.6986301369863014
+            },
+            {
+              "bucket": 7,
+              "n": 8,
+              "predicted": 0.7268839899794202,
+              "actual": 0.875
+            }
+          ]
+        },
+        "blend": {
+          "n": 250,
+          "brier": 0.22892284698836834,
+          "log_loss": 0.650309664122142,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 1,
+              "predicted": 0.49140287275012495,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 190,
+              "predicted": 0.5571301601034354,
+              "actual": 0.6210526315789474
+            },
+            {
+              "bucket": 6,
+              "n": 58,
+              "predicted": 0.6148169816564132,
+              "actual": 0.7241379310344828
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "nfl": {
+        "n": 30,
+        "settled_n": 0,
+        "games": 1,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "nhl": {
+        "n": 1159,
+        "settled_n": 416,
+        "games": 25,
+        "hit_rate": 0.5865384615384616,
+        "roi": -0.5121424450360474,
+        "roi_ci": [
+          -0.5309266061135294,
+          -0.4843099778308217
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 476,
+        "unresolved": 60,
+        "model": {
+          "n": 369,
+          "brier": 0.22990706345037035,
+          "log_loss": 0.6519485759484552,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 200,
+              "predicted": 0.5508462486677831,
+              "actual": 0.545
+            },
+            {
+              "bucket": 6,
+              "n": 139,
+              "predicted": 0.6453704771330511,
+              "actual": 0.7266187050359713
+            },
+            {
+              "bucket": 7,
+              "n": 30,
+              "predicted": 0.7204489164936076,
+              "actual": 0.6333333333333333
+            }
+          ]
+        },
+        "blend": {
+          "n": 416,
+          "brier": 0.23313427311243243,
+          "log_loss": 0.658792092064658,
+          "calibration": [
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 2,
+              "predicted": 0.4607196182073434,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 258,
+              "predicted": 0.5433522471491632,
+              "actual": 0.5116279069767442
+            },
+            {
+              "bucket": 6,
+              "n": 150,
+              "predicted": 0.6177132875895331,
+              "actual": 0.74
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      }
+    },
+    "ranking": {
+      "best_value": {
+        "n": 30,
+        "settled_n": 0,
+        "games": 7,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "candidates": {
+        "n": 846,
+        "settled_n": 0,
+        "games": 12,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "game prices": {
+        "n": 780,
+        "settled_n": 0,
+        "games": 28,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "legacy / unknown": {
+        "n": 6035,
+        "settled_n": 666,
+        "games": 27,
+        "hit_rate": 0.6066066066066066,
+        "roi": -0.4693541380468305,
+        "roi_ci": [
+          -0.5275148096447954,
+          -0.4038815239213217
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 799,
+        "unresolved": 133,
+        "model": {
+          "n": 599,
+          "brier": 0.22790493169343984,
+          "log_loss": 0.6479305134908994,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 349,
+              "predicted": 0.5566128567362938,
+              "actual": 0.5816618911174785
+            },
+            {
+              "bucket": 6,
+              "n": 212,
+              "predicted": 0.6392843451954678,
+              "actual": 0.7169811320754716
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 666,
+          "brier": 0.23155340745024625,
+          "log_loss": 0.6556079974916414,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 3,
+              "predicted": 0.47094736972160395,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 448,
+              "predicted": 0.549195558446734,
+              "actual": 0.5580357142857143
+            },
+            {
+              "bucket": 6,
+              "n": 208,
+              "predicted": 0.6169056638197208,
+              "actual": 0.7355769230769231
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "most_likely": {
+        "n": 30,
+        "settled_n": 0,
+        "games": 9,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      }
+    },
+    "model_version": {
+      "25abb85fdcfe4b66e5c6dacb1e00ea0e75dfdae2:1b892d435e0f966242a34cc950f718181aa404399512d0f52e86abc0ce96932e": {
+        "n": 297,
+        "settled_n": 0,
+        "games": 11,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "35259a14ba233e9dedc78e9b645eb29cd3af77f2:1b892d435e0f966242a34cc950f718181aa404399512d0f52e86abc0ce96932e": {
+        "n": 293,
+        "settled_n": 0,
+        "games": 28,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "44d1210c649656533f509fb054002024697077ca:1b892d435e0f966242a34cc950f718181aa404399512d0f52e86abc0ce96932e": {
+        "n": 608,
+        "settled_n": 0,
+        "games": 28,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "96b859416630e086db5c1465890b7cf7980338fa:1b892d435e0f966242a34cc950f718181aa404399512d0f52e86abc0ce96932e": {
+        "n": 191,
+        "settled_n": 0,
+        "games": 19,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "e773bad55432989b7a4574bebe8453bfd00ed239:1b892d435e0f966242a34cc950f718181aa404399512d0f52e86abc0ce96932e": {
+        "n": 297,
+        "settled_n": 0,
+        "games": 11,
+        "hit_rate": null,
+        "roi": null,
+        "roi_ci": null,
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 0,
+        "unresolved": 0,
+        "model": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "blend": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      },
+      "legacy / unknown": {
+        "n": 6035,
+        "settled_n": 666,
+        "games": 27,
+        "hit_rate": 0.6066066066066066,
+        "roi": -0.4693541380468305,
+        "roi_ci": [
+          -0.5275148096447954,
+          -0.4038815239213217
+        ],
+        "mean_clv": null,
+        "clv_positive_rate": null,
+        "mean_line_clv": null,
+        "no_close_captured": 799,
+        "unresolved": 133,
+        "model": {
+          "n": 599,
+          "brier": 0.22790493169343984,
+          "log_loss": 0.6479305134908994,
+          "calibration": [
+            {
+              "bucket": 5,
+              "n": 349,
+              "predicted": 0.5566128567362938,
+              "actual": 0.5816618911174785
+            },
+            {
+              "bucket": 6,
+              "n": 212,
+              "predicted": 0.6392843451954678,
+              "actual": 0.7169811320754716
+            },
+            {
+              "bucket": 7,
+              "n": 38,
+              "predicted": 0.7218036688064103,
+              "actual": 0.6842105263157895
+            }
+          ]
+        },
+        "blend": {
+          "n": 666,
+          "brier": 0.23155340745024625,
+          "log_loss": 0.6556079974916414,
+          "calibration": [
+            {
+              "bucket": 1,
+              "n": 1,
+              "predicted": 0.18189994429351158,
+              "actual": 0.0
+            },
+            {
+              "bucket": 2,
+              "n": 1,
+              "predicted": 0.2694648888523443,
+              "actual": 0.0
+            },
+            {
+              "bucket": 3,
+              "n": 3,
+              "predicted": 0.37451176732011265,
+              "actual": 0.0
+            },
+            {
+              "bucket": 4,
+              "n": 3,
+              "predicted": 0.47094736972160395,
+              "actual": 0.0
+            },
+            {
+              "bucket": 5,
+              "n": 448,
+              "predicted": 0.549195558446734,
+              "actual": 0.5580357142857143
+            },
+            {
+              "bucket": 6,
+              "n": 208,
+              "predicted": 0.6169056638197208,
+              "actual": 0.7355769230769231
+            },
+            {
+              "bucket": 7,
+              "n": 1,
+              "predicted": 0.7017381307727759,
+              "actual": 0.0
+            },
+            {
+              "bucket": 8,
+              "n": 1,
+              "predicted": 0.8052422989659371,
+              "actual": 1.0
+            }
+          ]
+        },
+        "market": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null,
+          "calibration": []
+        },
+        "demote_candidate": false
+      }
+    }
+  },
+  "tickets": {
+    "n": 44,
+    "graded": 0,
+    "profit": 0
+  },
+  "limitations": [
+    "DFS individual-leg ROI undefined; use ticket returns.",
+    "Legacy missing provenance is unknown; no hindsight forecast backfill.",
+    "CLV is last captured pregame quote, not an official close."
+  ]
+}
