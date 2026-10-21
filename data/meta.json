@@ -1,10 +1,13 @@
 {
-  "snapshot_at": "2026-10-21T15:40:10.119621-07:00",
+  "snapshot_at": "2026-10-21T16:29:20.241524-07:00",
   "timezone": "America/Los_Angeles",
   "date": "2026-10-21",
   "warnings": [
+    "No frozen nba alt50 for 2026-10-21",
     "No frozen nfl props50 for 2026-10-21",
     "No frozen nfl all100 for 2026-10-21",
+    "No frozen nfl alt50 for 2026-10-21",
+    "No frozen nhl alt50 for 2026-10-21",
     "No frozen mlb props50 for 2026-10-21",
     "No frozen mlb all100 for 2026-10-21"
   ],
