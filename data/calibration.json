@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-21T20:40:19.458142+00:00",
-  "legs": 1,
-  "brier": 0.037837817880658695,
+  "generated": "2026-10-21T22:24:05.420524+00:00",
+  "legs": 0,
+  "brier": null,
   "buckets": [
     {
       "lo": 0,
@@ -76,15 +76,12 @@
     {
       "lo": 0.8,
       "hi": 0.85,
-      "n": 1,
-      "wins": 1,
-      "hit_rate": 1.0,
-      "mean_prob": 0.8054805462668099,
-      "ci95": [
-        1.0,
-        1
-      ],
-      "mean_break_even": 0.5773502691896257
+      "n": 0,
+      "wins": 0,
+      "hit_rate": null,
+      "mean_prob": null,
+      "ci95": null,
+      "mean_break_even": null
     },
     {
       "lo": 0.85,
@@ -117,8 +114,6 @@
       "mean_break_even": null
     }
   ],
-  "by_version": {
-    "nba-test:glm:2026-01-01T00:00": 1
-  },
+  "by_version": {},
   "rule": "graded (official) lists only; prob_source=model rows built under the model-only rules; one grade per unique leg; pushes excluded"
 }
