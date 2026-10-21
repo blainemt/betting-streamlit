@@ -18,7 +18,7 @@ LIMIT = 20_000_000
 
 def clean(value):
     if isinstance(value, dict):
-        return {k: clean(v) for k, v in value.items() if not SENSITIVE.search(k)}
+        return {k: clean(v) for k, v in value.items() if not SENSITIVE.search(k) and not k.startswith('raw_')}
     if isinstance(value, list):
         return [clean(v) for v in value]
     if isinstance(value, str):
@@ -60,16 +60,18 @@ def export(src):
             c.execute('PRAGMA query_only=ON')
             c.execute('BEGIN')
             tables = {r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'")}
-            for sport in ('nba', 'nfl', 'nhl', 'mlb'):
-                for kind, prefix, limit in [('props50', 'top50_props', 50), ('all100', 'top100_all', 100)]:
+            for sport in ('nba', 'nfl', 'nhl', 'mlb', 'all'):
+                for kind, prefix, limit in [('props50', 'top50_props', 50), ('all100', 'top100_all', 100), ('alt50', 'alt50', 50)]:
+                    if (sport == 'all' and kind != 'alt50') or (sport == 'mlb' and kind == 'alt50'):
+                        continue
                     tag = f'list:{prefix}:{sport}'
                     s = c.execute('SELECT * FROM list_snapshots WHERE tag=? AND list_date=? ORDER BY version DESC LIMIT 1', (tag, day)).fetchone() if 'list_snapshots' in tables else None
                     item = dict(sport=sport, kind=kind, date=day, rows=[], market_only=[])
                     if s:
                         params = json.loads(s['params_json'] or '{}')
-                        item.update(version=s['version'], created_at=s['created_at'], rows=json.loads(s['rows_json'])[:limit], market_only=params.get('market_only', [])[:100], rules=params.get('rules', {}))
+                        item.update(version=s['version'], created_at=s['created_at'], rows=json.loads(s['rows_json'])[:limit], market_only=params.get('market_only', [])[:100], rules=params.get('rules', {}), as_of=params.get('as_of'), verification=params.get('verification'))
                         for row in item['rows'] + item['market_only']:
-                            if row.get('pick_log_id') and 'pick_log' in tables:
+                            if kind != 'alt50' and row.get('pick_log_id') and 'pick_log' in tables:
                                 flags = c.execute('SELECT flags FROM pick_log WHERE id=?', (row['pick_log_id'],)).fetchone()
                                 if flags: row['flags'] = json.loads(flags[0] or '[]')
                     else:

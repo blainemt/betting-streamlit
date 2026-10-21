@@ -30,6 +30,12 @@ def payout_for(table, multipliers):
     return (base * math.prod(multipliers), 'Standard table' if all(m == 1 for m in multipliers) else 'Multiplicative estimate; verify in betslip') if base else (None, 'Payout table unavailable')
 
 
+def alt_parlay(rows):
+    if not rows: return dict(model=None, price=None, payout=None)
+    price = math.prod(r['yes_ask'] / 100 for r in rows)
+    return dict(model=math.prod(r['hit_prob'] for r in rows), price=price, payout=1 / price)
+
+
 def display_frame(rows):
     """Expose only the frozen ranking probability; legacy model_prob may be raw."""
     df = pd.json_normalize(rows)
@@ -72,7 +78,7 @@ def main():
     st.title('Betting research snapshot')
     if meta.get('warnings'):
         with st.expander('Snapshot notices'): st.write(meta['warnings'])
-    top, gaps, record, calculator = st.tabs(['Top lists', 'Gaps', 'Calibration / track record', 'Dabble payout calculator'])
+    top, alt, gaps, record, calculator = st.tabs(['Top lists', 'Alt 50', 'Gaps', 'Calibration / track record', 'Dabble payout calculator'])
     with top:
         sport = st.selectbox('Sport', ['nba','nfl','nhl','mlb'], format_func=str.upper)
         kind = st.radio('List', ['props50','all100'], format_func=lambda v: 'Props 50' if v == 'props50' else 'All 100', horizontal=True)
@@ -89,6 +95,24 @@ def main():
         st.subheader('Market-only · unranked')
         st.caption('These rows have no independent model probability and are excluded from the model filter and ranking.')
         show_rows(item.get('market_only', []), ranked=False)
+    with alt:
+        alt_sport = st.selectbox('Alt 50 sport', ['all', 'nba', 'nfl', 'nhl'], format_func=str.upper)
+        item = next((x for x in load('top_lists.json', []) if x['sport'] == alt_sport and x['kind'] == 'alt50'), {})
+        st.caption(f"As of {item.get('as_of') or 'unavailable'} · Version {item.get('version', '—')}")
+        st.write('Verification:', item.get('verification') or {})
+        rows = item.get('rows', [])
+        if rows:
+            frame = pd.DataFrame([{'Rank': r['rank'], 'Sport': r['league'].upper(), 'Player / market': r['who'],
+                'Strike': r['strike'], 'Game': r['game'], 'Start PT': r['start_pt'], 'Model %': r['hit_prob'],
+                'Kalshi YES ask (¢)': r['yes_ask'], 'Kalshi implied %': r['implied'], 'Gap': r['gap'],
+                'Flags': ', '.join(r['flags']), 'Kalshi ticker': r['kalshi_ticker']} for r in rows])
+            st.dataframe(frame, hide_index=True, column_config={k: st.column_config.NumberColumn(format='percent') for k in ['Model %', 'Kalshi implied %', 'Gap']})
+        else: st.info('No frozen Alt 50 rows available.')
+        chosen = st.multiselect('Parlay legs', list(range(len(rows))), format_func=lambda i: f"{rows[i]['rank']}. {rows[i]['who']} {rows[i]['strike']} · {rows[i]['game']}")
+        result = alt_parlay([rows[i] for i in chosen])
+        if chosen:
+            st.write(f"Combined Model %: {result['model']:.2%} · Combined Kalshi price: {result['price']*100:.2f}¢ · Payout per $1: ${result['payout']:.2f}")
+        st.caption('same-game legs are correlated; product assumes independence')
     with gaps:
         data = load('gaps.json')
         st.caption(f"Scan: {data.get('at','unavailable')} · compared {data.get('compared',0)}")
