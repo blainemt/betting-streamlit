@@ -76,7 +76,7 @@ def export(src):
                         warnings.append(f'No frozen {sport} {kind} for {day}')
                     lists.append(item)
             if 'pick_log' in tables:
-                cols = 'id shown_at league event_id player market selection line venue venue_price model_prob fair_prob result actual graded_at flags ranking_source angle line_clv prob_clv'.split()
+                cols = 'id shown_at league event_id player market selection line venue venue_price blended_prob fair_prob result actual graded_at flags ranking_source angle line_clv prob_clv'.split()
                 available = {r[1] for r in c.execute('PRAGMA table_info(pick_log)')}
                 cols = [x for x in cols if x in available]
                 picks = [dict(r) for r in c.execute('SELECT '+','.join(cols)+" FROM pick_log WHERE result IN ('win','loss','push') OR ranking_source='paper_leads' OR flags LIKE '%paper:%' ORDER BY id DESC LIMIT 10000")]

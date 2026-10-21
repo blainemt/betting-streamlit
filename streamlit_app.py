@@ -30,11 +30,23 @@ def payout_for(table, multipliers):
     return (base * math.prod(multipliers), 'Standard table' if all(m == 1 for m in multipliers) else 'Multiplicative estimate; verify in betslip') if base else (None, 'Payout table unavailable')
 
 
+def display_frame(rows):
+    """Expose only the frozen ranking probability; legacy model_prob may be raw."""
+    df = pd.json_normalize(rows)
+    calibrated = next((k for k in ('hit_prob', 'prob', 'blended_prob') if k in df), None)
+    if calibrated:
+        df['Model %'] = df[[k for k in ('hit_prob', 'prob', 'blended_prob') if k in df]].bfill(axis=1).iloc[:, 0]
+    return df.drop(columns=[k for k in df if k.split('.')[-1] in {
+        'hit_prob', 'prob', 'blended_prob', 'model_prob', 'raw_model_prob',
+        'p_if_plays', 'p_model', 'play_prob', 'probability'
+    } or any(part.startswith('raw_') for part in k.split('.'))], errors='ignore')
+
+
 def show_rows(rows, ranked=True):
     if not rows:
         st.info('No rows available for this snapshot or filter.')
         return
-    df = pd.DataFrame(rows)
+    df = display_frame(rows)
     def badges(r):
         flags = r.get('flags')
         if isinstance(flags, str):
@@ -47,8 +59,8 @@ def show_rows(rows, ranked=True):
         return '; '.join(str(x) for x in bits)
     df['Flags'] = [badges(r) for r in rows]
     if not ranked: df['rank'] = 'Unranked'
-    cols = [x for x in ['rank','game','start_pt','who','player','market_label','market','selection','line','venue','price_text','model_prob','raw_model_prob','market_prob','break_even','gap','calibration','Flags','reason'] if x in df]
-    st.dataframe(df[cols], hide_index=True, width='stretch', column_config={k: st.column_config.NumberColumn(k.replace('_',' ').title(), format='percent') for k in ['model_prob','raw_model_prob','market_prob','break_even','gap']})
+    cols = [x for x in ['rank','game','start_pt','who','player','market_label','market','selection','line','venue','price_text','Model %','market_prob','break_even','gap','calibration','Flags','reason'] if x in df]
+    st.dataframe(df[cols], hide_index=True, width='stretch', column_config={k: st.column_config.NumberColumn('Model %' if k == 'Model %' else k.replace('_',' ').title(), format='percent') for k in ['Model %','market_prob','break_even','gap']})
 
 
 def main():
@@ -64,16 +76,16 @@ def main():
     with top:
         sport = st.selectbox('Sport', ['nba','nfl','nhl','mlb'], format_func=str.upper)
         kind = st.radio('List', ['props50','all100'], format_func=lambda v: 'Props 50' if v == 'props50' else 'All 100', horizontal=True)
-        sort = st.selectbox('Sort by', ['Model probability','Gap'])
+        sort = st.selectbox('Sort by', ['Model %','Gap'])
         high = st.checkbox('Model 95%+')
         item = next((x for x in load('top_lists.json', []) if x['sport']==sport and x['kind']==kind), {})
         st.caption(f"List date: {item.get('date','unavailable')} · Version {item.get('version','—')} · Frozen {item.get('created_at','unavailable')}")
         rows = item.get('rows', [])
-        if high: rows = [r for r in rows if (r.get('model_prob') or 0) >= .95]
-        field = 'model_prob' if sort == 'Model probability' else 'gap'
+        if high: rows = [r for r in rows if (r.get('hit_prob', r.get('prob')) or 0) >= .95]
+        field = 'hit_prob' if sort == 'Model %' else 'gap'
         rows = sorted(rows, key=lambda r: r.get(field) if r.get(field) is not None else -math.inf, reverse=True)
         show_rows(rows)
-        st.caption('Rank is the original frozen rank. Gap is model probability minus price break-even; raw model probability is shown separately.')
+        st.caption('Rank is the original frozen rank. Gap is Model % minus price break-even. Model % is the calibrated probability including chance of playing.')
         st.subheader('Market-only · unranked')
         st.caption('These rows have no independent model probability and are excluded from the model filter and ranking.')
         show_rows(item.get('market_only', []), ranked=False)
@@ -82,7 +94,7 @@ def main():
         st.caption(f"Scan: {data.get('at','unavailable')} · compared {data.get('compared',0)}")
         st.info('Scan gaps compare the reference market with venue break-even; they are not demonstrated model edges. Adjusted Dabble prices may have unknown payouts.')
         rows = data.get('gaps', [])
-        if rows: st.dataframe(pd.json_normalize(rows), hide_index=True, width='stretch')
+        if rows: st.dataframe(display_frame(rows), hide_index=True, width='stretch')
         else: st.info('No gap scan available.')
     with record:
         cal = load('calibration.json')
@@ -108,7 +120,7 @@ def main():
         if not results.empty and 'result' in results:
             settled = results[results.result.isin(['win','loss','push'])]
             if not settled.empty: st.plotly_chart(px.histogram(settled, x='result', color='result', title='Exported frozen pick outcomes (may include repeated legs)'), width='stretch')
-            st.dataframe(results, hide_index=True, width='stretch')
+            st.dataframe(display_frame(results.to_dict("records")), hide_index=True, width='stretch')
         else: st.info('No graded pick results available.')
         st.caption('Results export is capped at 10,000 recent records. Scorecard and calibration use their source policies; repeated picks are not independent trials.')
         with st.expander('Official list grades · version 1'):
