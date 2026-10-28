@@ -76,6 +76,11 @@ def main():
     st.warning('Paper only, unproven — probabilities have not established an edge against closing lines.')
     st.caption(f"Snapshot: {meta.get('snapshot_at', 'unavailable')} · America/Los_Angeles · read-only")
     st.title('Betting research snapshot')
+    st.caption('Paper rule reference: Model ≥89%; Kalshi YES ask ≤90¢; Model minus ask gap ≤15 percentage points. Shared eligibility and ticket safety gates also apply.')
+    with st.expander('HC paper and unders qualification'):
+        st.write('HC is a paper scanner (paper:hc_scan), with no orders or ticket logging. These cutoffs do not establish calibration or profitability. NBA player legs require a captured confirmed starting five before the freeze; projected lineups do not qualify.')
+        st.write('Unders require at least 100 forward legs in the market and a Wilson lower bound ≥60%, plus Model ≥89%, price/gap, eligibility and ticket gates. Dabble legs are frozen paper references; verify the actual ticket payout.')
+        st.info('HC and unders results are unavailable unless explicitly exported. Empty exported lists do not prove that there are no games or candidates. Use saved rules, readiness and exclusion counters; missing evidence remains unavailable.')
     if meta.get('warnings'):
         with st.expander('Snapshot notices'): st.write(meta['warnings'])
     top, alt, gaps, record, calculator = st.tabs(['Top lists', 'Alt 50', 'Gaps', 'Calibration / track record', 'Dabble payout calculator'])
@@ -100,6 +105,7 @@ def main():
         item = next((x for x in load('top_lists.json', []) if x['sport'] == alt_sport and x['kind'] == 'alt50'), {})
         st.caption(f"As of {item.get('as_of') or 'unavailable'} · Version {item.get('version', '—')}")
         st.write('Verification:', item.get('verification') or {})
+        st.write('Saved rules:', item.get('rules') or 'Unavailable in export')
         rows = item.get('rows', [])
         if rows:
             frame = pd.DataFrame([{'Rank': r['rank'], 'Sport': r['league'].upper(), 'Player / market': r['who'],
