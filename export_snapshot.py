@@ -14,6 +14,20 @@ ROOT = Path(__file__).resolve().parent
 SENSITIVE = re.compile(r'key|token|secret|password|credential|authorization|cookie', re.I)
 VALUE = re.compile(r'(?:Bearer\s+\S+|sk-[A-Za-z0-9_-]{16,}|(?:api[_-]?key|access[_-]?token|password|secret)\s*[:=]\s*\S+)', re.I)
 LIMIT = 20_000_000
+BUDGET = 15_000_000  # leave headroom under Streamlit/GitHub's 20 MB snapshot limit
+PICK_FLAG_DROP = ('vacated:', 'lab:', 'insufficient graded data', 'unvalidated equal-book')
+
+
+def slim_flags(raw):
+    """Keep short, decision-relevant pick flags; drop per-slate injury/lab boilerplate that bloats the export."""
+    if isinstance(raw, str):
+        try: raw = json.loads(raw)
+        except ValueError: raw = [raw]
+    out = []
+    for f in raw or []:
+        if not isinstance(f, str) or f.startswith(PICK_FLAG_DROP): continue
+        out.append(f if len(f) <= 80 else f[:77] + '...')
+    return out[:12]
 
 
 def clean(value):
@@ -82,11 +96,17 @@ def export(src):
                 available = {r[1] for r in c.execute('PRAGMA table_info(pick_log)')}
                 cols = [x for x in cols if x in available]
                 picks = [dict(r) for r in c.execute('SELECT '+','.join(cols)+" FROM pick_log WHERE result IN ('win','loss','push') OR ranking_source='paper_leads' OR flags LIKE '%paper:%' ORDER BY id DESC LIMIT 10000")]
+                for r in picks:
+                    if 'flags' in r: r['flags'] = slim_flags(r['flags'])
             if {'list_grades', 'list_snapshots'} <= tables:
                 for r in c.execute('SELECT s.tag,s.list_date,s.version,g.idx,g.result,g.graded_at FROM list_grades g JOIN list_snapshots s ON s.id=g.snapshot_id WHERE s.version=1 ORDER BY s.list_date DESC LIMIT 10000'):
                     grades.append(dict(r))
     else:
         warnings.append('Source database unavailable')
+    score = outputs.get('scorecard.json') or {}
+    if score:  # the app only reads the angle group; other groups were ~1.4 MB
+        outputs['scorecard.json'] = dict(at=score.get('at'), overall=score.get('overall'), tickets=score.get('tickets'),
+                                         limitations=score.get('limitations', []), groups={'angle': (score.get('groups') or {}).get('angle', {})})
     outputs.update({'top_lists.json': lists, 'graded_picks.json': picks, 'list_grades.json': grades})
     outputs['meta.json'] = dict(snapshot_at=now.isoformat(), timezone='America/Los_Angeles', date=day, warnings=warnings,
                                 graded_pick_limit=10000, list_grades_policy='First frozen version only', read_only=True)
@@ -95,13 +115,14 @@ def export(src):
     with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
         staging = Path(tmp)
         for name, value in outputs.items():
-            (staging / name).write_text(json.dumps(clean(value), ensure_ascii=False, indent=2, allow_nan=False) + '\n')
+            (staging / name).write_text(json.dumps(clean(value), ensure_ascii=False, separators=(',', ':'), allow_nan=False) + '\n')
         with (staging / 'graded_picks.csv').open('w', newline='') as f:
             rows = clean(picks)
             writer = csv.DictWriter(f, fieldnames=list(rows[0]) if rows else ['result'])
             writer.writeheader()
             writer.writerows({k: json.dumps(v) if isinstance(v, (list, dict)) else v for k, v in r.items()} for r in rows)
         total = sum(p.stat().st_size for p in staging.iterdir())
+        if total >= BUDGET: print(f'WARNING: snapshot {total:,} bytes is above the {BUDGET:,} byte budget')
         if total >= LIMIT: raise ValueError('Snapshot exceeds 20 MB; refusing to publish')
         for p in staging.iterdir(): p.replace(data / p.name)
     print(f'Snapshot {day}: {total:,} bytes; {len(warnings)} notices')

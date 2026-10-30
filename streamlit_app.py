@@ -78,7 +78,7 @@ def main():
     st.title('Betting research snapshot')
     st.caption('Paper rule reference: Model ≥89%; Kalshi YES ask ≤90¢; Model minus ask gap ≤15 percentage points. Shared eligibility and ticket safety gates also apply.')
     with st.expander('HC paper and unders qualification'):
-        st.write('HC is a paper scanner (paper:hc_scan), with no orders or ticket logging. These cutoffs do not establish calibration or profitability. NBA player legs require a captured confirmed starting five before the freeze; projected lineups do not qualify.')
+        st.write('HC is a paper scanner (paper:hc_scan), with no orders or ticket logging. These cutoffs do not establish calibration or profitability. NBA player legs require a captured confirmed starting five before the freeze; projected lineups do not qualify. NHL skater props require captured confirmed participation before the freeze; missing, projected, late or conflicting evidence blocks admission, and explicit scratches are excluded.')
         st.write('Unders require at least 100 forward legs in the market and a Wilson lower bound ≥60%, plus Model ≥89%, price/gap, eligibility and ticket gates. Dabble legs are frozen paper references; verify the actual ticket payout.')
         st.info('HC and unders results are unavailable unless explicitly exported. Empty exported lists do not prove that there are no games or candidates. Use saved rules, readiness and exclusion counters; missing evidence remains unavailable.')
     if meta.get('warnings'):
